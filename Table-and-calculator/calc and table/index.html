@@ -1,0 +1,66 @@
+<!DOCTYPE = html>
+<html>
+<head>
+<title>Table and calculator</title>
+<meta charset = utf-8>
+<meta name = description  content="chatbox"
+<meta name = keywords content = "chatbox">
+<link rel="stylesheet" href="./css/stylesheet.css" type="text/css" />
+ <script src="rekenjavascript.js"></script>
+
+<script language= JavaScript" type="text/javascript">
+  function Maaktabel() {
+    var Uitkomst;
+    var table = document.getElementById("tbWiskunde");
+    var tr, td;
+    for (var r=0; r<10; r++) {
+    tr = document.createElement("tr");
+    tr.id = "tr" + r;
+    for (var k=0; k<3; k++){
+    td = document.createElement("td");
+    td.id = "td" + "r" + r + "k" + k;
+    td.bgColor = "#FFFFFF";
+    td.style.color = "#000000";
+    td.style.borderHeight = "2em";
+    td.style.borderWidth = "1px";
+    Uitkomst = Macht(r+1,k+1);
+    td.innerHTML= Uitkomst;
+    tr.appendChild(td); }
+    table.appendChild(tr); }  }
+
+  function Macht(Getal, Machtnr) {
+    if (Machtnr > 1 ) {
+    Getal = Getal * Macht(Getal, Machtnr-1);
+    return Getal; }
+    else {
+      return Getal;  }v}
+</script>
+</head>
+
+  <body onLoad ="Maaktabel()">
+  <div id = "inhoud" class = "divinhoud">
+  <div id = "divTabel" class = "divTabel">
+  <table id = "tbWiskunde">
+  <th>Getal</th><th>Kwadraat</th><th>Derde Macht</th>
+  </table>
+  </div>
+  </center>
+  <br>
+  </div>
+
+  <form name="reken" div id = "rekenen">
+  Getal 1:<br>
+  <input type="text" size="15" name="getal1"><br>
+  Getal 2:<br>
+  <input type="text" size="15" name="getal2"><br><br>
+  <input type=button value="+" id="kop" onclick="Reken('+')">
+  <input type=button value="-" id="kop" onclick="Reken('-')">
+  <input type=button value="x" id="kop" onclick="Reken('x')">
+  <input type=button value="/" id="kop" onclick="Reken('/')"><br><br>
+
+  Uitkomst:<br>
+  <input type="text" size="15" name="uitkomst"><br><br>
+
+  <input type=button value="Opnieuw" id="kop" onclick="Schonen()"></form>
+ </body>
+</html>

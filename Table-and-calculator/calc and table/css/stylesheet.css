@@ -1,0 +1,35 @@
+body {
+  font-family   : Arial, Helvetica, sans-serif;
+  background: #006666;
+  color: #FFFF00;
+}
+
+#inhoud {
+  color     : green;
+  border-radius: 20px;
+  width   : 40vw;
+  height  : 50vh;
+  padding-left: 30vw;
+  padding-top: 10vh;
+
+}
+
+#tbWiskunde {
+  border: 5px solid grey;
+  width : 100%;
+
+}
+
+td {
+  border: 4px solid #000000;
+  text-align: center;
+  background-color: green;
+}
+  #rekenen{
+
+
+    padding-left: 40vw;
+    background: blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
